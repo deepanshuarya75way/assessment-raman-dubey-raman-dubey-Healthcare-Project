@@ -53,5 +53,5 @@ const appointmentSchema = new mongoose.Schema({
 })
 
 const Appointment = mongoose.model('Appointment', appointmentSchema)
-
+appointmentSchema.index({ doctor: 1, date: 1, timeslot: 1}, {unique: true });
 export default Appointment
